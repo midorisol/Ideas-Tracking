@@ -4,6 +4,7 @@ import { NewIdeaComponent } from './new-idea/new-idea.component';
 import { ListIdeaComponent } from './list-idea/list-idea.component';
 import { IdeaComponent } from './idea/idea.component';
 import { VoteComponent } from './vote/vote.component';
+import {IdeasRoutingModule} from "./ideas-routing.module";
 
 
 
@@ -15,7 +16,8 @@ import { VoteComponent } from './vote/vote.component';
     VoteComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IdeasRoutingModule
   ]
 })
 export class IdeasModule { }

@@ -1,24 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {LoginComponent} from "../auth/login/login.component";
-import {RegistrationComponent} from "../auth/registration/registration.component";
+import {ListIdeaComponent} from "./list-idea/list-idea.component";
+import {NewIdeaComponent} from "./new-idea/new-idea.component";
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/ideas'
+    component: ListIdeaComponent
   },
   {
-    path:'login',
-    component: LoginComponent
-  },
-  {
-    path:'registration',
-    component: RegistrationComponent
-  }
-  {
-    path:'ideas'
-    loadChildren: () => import('.ideas/ideas.module').then(m => m.IdeasModule)
+    path:'new',
+    component: NewIdeaComponent
   }
 ];
 
