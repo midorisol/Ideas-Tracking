@@ -3,6 +3,6 @@
     <span>Ideabox</span>
   </div>
   <div>
-  <button mat-button><mat-icon>logout</mat-icon></button>
+  <button mat-button *ngIf="isLoggedIn" (click)="logout()"><mat-icon>logout</mat-icon></button>
   </div>
 </mat-toolbar>
