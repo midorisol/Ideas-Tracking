@@ -5,6 +5,10 @@ import { ListIdeaComponent } from './list-idea/list-idea.component';
 import { IdeaComponent } from './idea/idea.component';
 import { VoteComponent } from './vote/vote.component';
 import {IdeasRoutingModule} from "./ideas-routing.module";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {MatBadgeModule} from "@angular/material/badge";
 
 
 
@@ -17,7 +21,11 @@ import {IdeasRoutingModule} from "./ideas-routing.module";
   ],
   imports: [
     CommonModule,
-    IdeasRoutingModule
+    IdeasRoutingModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatBadgeModule
   ]
 })
 export class IdeasModule { }
