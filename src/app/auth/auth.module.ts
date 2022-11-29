@@ -6,6 +6,8 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {AuthInterceptorService} from "./auth-interceptor.service";
 
 
 
@@ -24,6 +26,13 @@ import {MatInputModule} from "@angular/material/input";
   exports: [
     LoginComponent,
     RegistrationComponent
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass:AuthInterceptorService,
+      multi: true
+    }
   ]
 })
 export class AuthModule { }
