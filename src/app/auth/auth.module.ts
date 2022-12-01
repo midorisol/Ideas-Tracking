@@ -8,6 +8,7 @@ import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {AuthInterceptorService} from "./auth-interceptor.service";
+import {RouterLink} from "@angular/router";
 
 
 
@@ -21,7 +22,8 @@ import {AuthInterceptorService} from "./auth-interceptor.service";
     MatCardModule,
     MatButtonModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    RouterLink
   ],
   exports: [
     LoginComponent,

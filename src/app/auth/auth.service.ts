@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 export class AuthService {
   // @ts-ignore
   private _currentUser = new BehaviorSubject<User>(undefined);
-  private _baseUrl = `${environment.baseUrl}/auth`;
+  private baseUrl = `${environment.baseUrl}/auth`;
   private readonly loggedInUserKey = 'LoggedInUser';
 
 
@@ -33,13 +33,13 @@ export class AuthService {
   }
 
   sessionInfo() {
-    return this.http.get<{isLoggedIn: boolean}>(`${this._baseUrl}/sessionInfo`).pipe(
+    return this.http.get<{isLoggedIn: boolean}>(`${this.baseUrl}/sessionInfo`).pipe(
       map(sessionInfo => sessionInfo.isLoggedIn)
     )
   }
 
   login(email: string | undefined, password: string | undefined) {
-  return  this.http.post<User>(`${this._baseUrl}/login`, {email, password}).pipe(
+  return  this.http.post<User>(`${this.baseUrl}/login`, {email, password}).pipe(
     tap(user =>{
       this.storeUserAfterLogin(user);
       this._currentUser.next(user);
@@ -48,7 +48,7 @@ export class AuthService {
   }
 
   logout() {
-    return  this.http.post(`${this._baseUrl}/logout`, null).pipe(
+    return  this.http.post(`${this.baseUrl}/logout`, null).pipe(
       tap(user =>{
         this.clearLocalStorage();
         // @ts-ignore
@@ -56,6 +56,10 @@ export class AuthService {
         this.router.navigateByUrl('/login');
       })
     )
+  }
+
+  registration(email: string, username: string, password: string) {
+  return this.http.post(`${this.baseUrl}/registration`, {email, username, password})
   }
 
   isLoggedIn() {

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-registration',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() { }
+  email: string = '';
+  username: string = '';
+  password: string = '';
+  passwordCheck = '';
+
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  registration() {
+    if(this.password === this.passwordCheck) {
+      this.authService.registration(this.email, this.username, this.password).subscribe({
+        next: response => this.router.navigateByUrl('/login')
+        }
+      )
+    }
   }
 
 }
