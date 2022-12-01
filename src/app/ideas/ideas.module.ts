@@ -9,6 +9,8 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatBadgeModule} from "@angular/material/badge";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
 
 
 
@@ -25,7 +27,9 @@ import {MatBadgeModule} from "@angular/material/badge";
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    MatBadgeModule
+    MatBadgeModule,
+    ReactiveFormsModule,
+    MatInputModule
   ]
 })
 export class IdeasModule { }

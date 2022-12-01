@@ -1,1 +1,14 @@
-<p>new-idea works!</p>
+<div class="container">
+  <h1>Submit your idea</h1>
+  <form [formGroup]="form" (ngSubmit)="submitted()">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input matInput formControlName="description">
+    </mat-form-field>
+    <button mat-button color="primary">Save</button>
+  </form>
+</div>

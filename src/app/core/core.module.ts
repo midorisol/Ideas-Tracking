@@ -5,6 +5,7 @@ import { MenuComponent } from './menu/menu.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
+import {RouterLink} from "@angular/router";
 
 
 
@@ -13,12 +14,13 @@ import {MatIconModule} from "@angular/material/icon";
     HomeComponent,
     MenuComponent
   ],
-  imports: [
-    CommonModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule
-  ],
+    imports: [
+        CommonModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        RouterLink
+    ],
   exports: [
     HomeComponent,
     MenuComponent
