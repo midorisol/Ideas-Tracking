@@ -4,10 +4,16 @@
     <mat-form-field appearance="outline">
       <mat-label>Name</mat-label>
       <input matInput formControlName="name">
+      <mat-error *ngIf="form.controls['name'].errors">
+      Name must be provided
+      </mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Description</mat-label>
       <input matInput formControlName="description">
+      <mat-error *ngIf="form.controls['description'].errors">
+      Description must be provided
+      </mat-error>
     </mat-form-field>
     <button mat-button color="primary">Save</button>
   </form>
