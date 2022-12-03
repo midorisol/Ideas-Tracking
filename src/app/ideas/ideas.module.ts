@@ -11,6 +11,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatBadgeModule} from "@angular/material/badge";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import {MatProgressSpinner, MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 
 
@@ -29,7 +31,9 @@ import {MatInputModule} from "@angular/material/input";
     MatIconModule,
     MatBadgeModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatSnackBarModule
   ]
 })
 export class IdeasModule { }

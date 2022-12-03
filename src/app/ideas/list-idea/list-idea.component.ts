@@ -29,4 +29,8 @@ export class ListIdeaComponent implements OnInit {
   goToDetails(idea: Idea) {
     this.router.navigateByUrl(`/ideas/${idea.id}`);
   }
+
+  editIdea(idea: Idea) {
+    this.router.navigateByUrl(`/ideas/new?id=${idea.id}`)
+  }
 }

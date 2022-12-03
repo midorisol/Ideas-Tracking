@@ -11,6 +11,7 @@ export class IdeasService {
 
   constructor(private http: HttpClient) { }
 
+
   listIdeas() {
     return this.http.get<Idea[]>(`${this._baseUrl}`);
   }

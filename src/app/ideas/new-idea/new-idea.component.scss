@@ -4,6 +4,7 @@
   margin: auto;
   background-color:#023047;
 
+
   h1 {
     color: aliceblue;
   }
@@ -11,4 +12,11 @@
   mat-form-field {
     width: 100%;
   }
+
+}
+
+.button {
+  display: flex;
+  align-items: center;
+
 }

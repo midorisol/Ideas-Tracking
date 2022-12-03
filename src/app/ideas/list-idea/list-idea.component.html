@@ -7,6 +7,7 @@
     <mat-card-actions align="start">
       <button mat-button (click)="goToDetails(idea)"><mat-icon>more_horiz</mat-icon></button>
       <app-vote [idea]="idea" (onVote)="listIdeas()"></app-vote>
+      <button mat-button (click)="editIdea(idea)"><mat-icon>edit</mat-icon></button>
       <button mat-button (click)="delete(idea)"><mat-icon>delete</mat-icon></button>
     </mat-card-actions>
   </mat-card>

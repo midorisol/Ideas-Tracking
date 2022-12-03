@@ -15,6 +15,10 @@
       Description must be provided
       </mat-error>
     </mat-form-field>
-    <button mat-button color="primary">Save</button>
+
+    <div class="button">
+      <button [disabled]="form.invalid || isLoading" mat-button color="primary">Save</button>
+      <mat-spinner diameter="30" *ngIf="isLoading"></mat-spinner>
+    </div>
   </form>
 </div>
